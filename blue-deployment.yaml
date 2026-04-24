@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: iwallet-app-blue
+  namespace: default
+  
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: iwallet-app
+  template:
+    metadata:
+      labels:
+        app: iwallet-app
+        version: blue
+    spec:
+      imagePullSecrets: 
+        - name: ghcr-secret
+      containers:
+        - name: iwallet-app-container
+          image: ghcr.io/abobkeryousif/iwallet:b6e81d668762fc8dd58497f44df592dfe74ca85d
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+      resources:
+       limits:
+          memory: "300Mi" 
+          cpu: "500m"
+       requests:
+          memory: "200Mi"
+          cpu: "350m"

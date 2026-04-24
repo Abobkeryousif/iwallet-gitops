@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: iwallet-app-service
+spec:
+  selector:
+    app: iwallet-app
+    version: green 
+  ports:
+    - port: 8080
+      targetPort: 8080
