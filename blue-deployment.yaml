@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: iwallet-app-blue
-  namespace: default
+  namespace: iwallet-app
   
 spec:
   replicas: 5
