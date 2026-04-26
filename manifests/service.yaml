@@ -5,7 +5,7 @@ metadata:
 spec:
   selector:
     app: iwallet-app
-    version: green 
+    version: green
   ports:
     - port: 8080
       targetPort: 8080
