@@ -23,6 +23,10 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
+
+          env:
+            - name: Database__Enabled
+              value:  "false"
           resources:
             limits:
               memory: "300Mi" 
