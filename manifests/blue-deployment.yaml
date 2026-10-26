@@ -19,7 +19,7 @@ spec:
         - name: ghcr-secret
       containers:
         - name: iwallet-app-container
-          image: ghcr.io/abobkeryousif/iwallet:8305c6c50813d89fcfea75a40195e73167f9826a
+          image: ghcr.io/abobkeryousif/iwallet:d43bb7e43de9aaf6600f49fa0447a3be5abb724a
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
